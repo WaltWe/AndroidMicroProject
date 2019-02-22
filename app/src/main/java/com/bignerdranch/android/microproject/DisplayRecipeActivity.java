@@ -25,23 +25,23 @@ public class DisplayRecipeActivity extends AppCompatActivity {
         r = new Recipe(b.getString(KEY_TITLE), b.getStringArray(KEY_INGRED), b.getStringArray(KEY_STEPS), b.getInt(KEY_IMG));
     }
 
-    public Intent newIntent(Context packageContext, Recipe r) {
+    public static Intent newIntent(Context packageContext, Recipe recipe) {
         Intent intent = new Intent(packageContext, DisplayRecipeActivity.class);
-        intent.putExtra(EXTRA_BUNDLE, toBundle());
+        intent.putExtra(EXTRA_BUNDLE, toBundle(recipe));
         return intent;
     }
 
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putBundle(EXTRA_BUNDLE, toBundle());
+        savedInstanceState.putBundle(EXTRA_BUNDLE, toBundle(r));
     }
 
-    private Bundle toBundle() {
+    private static Bundle toBundle(Recipe recipe) {
         Bundle b = new Bundle();
-        b.putInt(KEY_IMG, r.getmPictureID());
-        b.putString(KEY_TITLE, r.getmRecipeName());
-        b.putStringArray(KEY_INGRED, r.getmIngredients());
-        b.putStringArray(KEY_STEPS, r.getmSteps());
+        b.putInt(KEY_IMG, recipe.getmPictureID());
+        b.putString(KEY_TITLE, recipe.getmRecipeName());
+        b.putStringArray(KEY_INGRED, recipe.getmIngredients());
+        b.putStringArray(KEY_STEPS, recipe.getmSteps());
         return b;
     }
 }
