@@ -5,4 +5,7 @@
     <string name="recipe3">Pumpkin Jello</string>
     <string name="recipe4">Pumpkin Coffee</string>
     <string name="image_hint">A preview of the recipe</string>
+    
+    <string name="ingredients">Ingredients:</string>
+    <string name="steps">Steps:</string>
 </resources>
