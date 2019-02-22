@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MicroProject</string>
+    <string name="recipe1">Pumpkin Pie</string>
+    <string name="recipe2">Pumpkin Bread</string>
+    <string name="recipe3">Pumpkin Jello</string>
+    <string name="recipe4">Pumpkin Coffee</string>
     <string name="image_hint">A preview of the recipe</string>
 </resources>
