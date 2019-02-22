@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mRecipe1;
-    private Button mRecipe2;
-    private Button mRecipe3;
-    private Button mRecipe4;
+    private ImageButton mRecipe1;
+    private ImageButton mRecipe2;
+    private ImageButton mRecipe3;
+    private ImageButton mRecipe4;
 
 
 
@@ -20,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecipe1= (Button) findViewById(R.id.recipe1); //Pumpkin Pie
-        mRecipe2= (Button) findViewById(R.id.recipe1); //Pumpkin Bread
-        mRecipe3= (Button) findViewById(R.id.recipe1); //Pumpkin Jello
-        mRecipe4= (Button) findViewById(R.id.recipe1); //Pumpkin Coffee
+        mRecipe1= findViewById(R.id.recipe1); //Pumpkin Pie
+        mRecipe2= findViewById(R.id.recipe1); //Pumpkin Bread
+        mRecipe3= findViewById(R.id.recipe1); //Pumpkin Jello
+        mRecipe4= findViewById(R.id.recipe1); //Pumpkin Coffee
 
         mRecipe1.setOnClickListener(new View.OnClickListener() {
             @Override
