@@ -8,36 +8,53 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <Button
+    <ImageButton
         android:id="@+id/recipe1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:background="@drawable/pumpkin_pie"
+        android:contentDescription="@string/recipe1"
+        android:cropToPadding="true"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:text="@string/recipe1" />
 
-    <Button
+    <ImageButton
         android:id="@+id/recipe2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:adjustViewBounds="false"
+        android:background="@drawable/pumpkin_bread"
+        android:contentDescription="@string/recipe2"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:text="@string/recipe2"
+        android:padding="15dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/recipe3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="265dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:background="@drawable/pumpkin_jello"
+        android:contentDescription="@string/recipe3"
+        android:cropToPadding="true"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:text="@string/recipe3" />
 
-    <Button
+    <ImageButton
         android:id="@+id/recipe4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="264dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25"
+        android:background="@drawable/pumpkin_coffee"
+        android:contentDescription="@string/recipe4"
+        android:cropToPadding="true"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:text="@string/recipe4" />
 
 </LinearLayout>
