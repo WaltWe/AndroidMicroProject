@@ -21,8 +21,10 @@ public class DisplayRecipeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipe);
 
-        Bundle b = savedInstanceState.getBundle(EXTRA_BUNDLE);
-        r = new Recipe(b.getString(KEY_TITLE), b.getStringArray(KEY_INGRED), b.getStringArray(KEY_STEPS), b.getInt(KEY_IMG));
+        //Bundle b = getIntent().getBundleExtra(EXTRA_BUNDLE);
+        Bundle b = getIntent().getExtras().getBundle(EXTRA_BUNDLE);
+        //Bundle b = savedInstanceState.getBundle(EXTRA_BUNDLE);
+        //r = new Recipe(b.getString(KEY_TITLE), b.getStringArray(KEY_INGRED), b.getStringArray(KEY_STEPS), b.getInt(KEY_IMG));
     }
 
     public static Intent newIntent(Context packageContext, Recipe recipe) {
