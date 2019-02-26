@@ -77,10 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 "¾ Cup of Canned Pumpkin \n"};//Ingredients for Pumpkin Bread
         String[] a2 = new String[]{"Preheat oven to 350 degrees F (175 degrees C). Grease a 8-1/2x4-1/2-inch loaf pan.\n" +
                 "Combine flour, baking soda, nutmeg, cinnamon, cloves, baking powder, and salt together in a large bowl.\n" +
-                "Beat eggs, white sugar, brown sugar, and vanilla extract in a large bowl with an electric mixer on high speed until combined, about 30 seconds. Beat in pumpkin and oil. Add flour mixture; mix until batter is blended and smooth.\n" +
+                "Beat eggs, white sugar, brown sugar, and vanilla extract in a large bowl with an electric mixer on high speed for about 30 seconds. \n" +
+                "Beat in pumpkin and oil. Add flour mixture; mix until batter is blended and smooth.\n" +
                 "Pour batter into the prepared loaf pan.\n" +
-                "Bake in the preheated oven until the top is dark brown and a toothpick inserted into the center of the bread comes out clean, about 70 minutes. Let cool in the pan, about 30 minutes. Invert onto a wire rack and slice it into 1-inch thick slices. \n" +
-                "Put Aluminum Foil on top and let it sit to cool for at least half an hour.\n"};//Directions for Pumpkin Bread
+                "Bake in the preheated oven until the top is dark brown and a toothpick inserted into the center of the bread comes out clean, about 70 minutes. \n" +
+                "Let cool in the pan, about 30 minutes. Then put Aluminum Foil on top and let it sit for half an hour.\n"};//Directions for Pumpkin Bread
         Recipe p0 = new Recipe("pumpkinBread", a1,a2,R.drawable.pumpkin_bread);
 
         String[] b1 = new String[]{"(15 ounces) caned pumpkin\n" +
