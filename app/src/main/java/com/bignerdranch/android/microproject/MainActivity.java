@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mRecipe1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = DisplayRecipeActivity.newIntent(MainActivity.this, recipies[0]);
+                Intent intent = DisplayRecipeActivity.newIntent(MainActivity.this, recipies[1]);
                 startActivity(intent);
             }
         });
@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mRecipe2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DisplayRecipeActivity.class);
-                intent.putExtra("whichrecipe","PumpkinBread");
+                Intent intent = DisplayRecipeActivity.newIntent(MainActivity.this,recipies[0]);
                 startActivity(intent);
             }
         });
@@ -48,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mRecipe3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DisplayRecipeActivity.class);
-                intent.putExtra("whichrecipe","PumpkinJello");
+                Intent intent = DisplayRecipeActivity.newIntent(MainActivity.this,recipies[2]);
                 startActivity(intent);
             }
         });
