@@ -56,8 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mRecipe4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,DisplayRecipeActivity.class);
-                intent.putExtra("whichrecipe","PumpkinCoffee");
+                Intent intent = DisplayRecipeActivity.newIntent(MainActivity.this,recipies[3]);
                 startActivity(intent);
             }
         });
