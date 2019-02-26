@@ -1,11 +1,10 @@
 package com.bignerdranch.android.microproject;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mRecipe3;
     private ImageButton mRecipe4;
 
-    private Recipe[] recipies = new Recipe[3];
+    private Recipe[] recipies = new Recipe[4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         mRecipe2= findViewById(R.id.recipe2); //Pumpkin Bread
         mRecipe3= findViewById(R.id.recipe3); //Pumpkin Jello
         mRecipe4= findViewById(R.id.recipe4); //Pumpkin Coffee
+
+        recipeInfo();
 
         mRecipe1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void RecipieInfo(){
+    private void recipeInfo(){
 
         String[] a1 = new String[]{"1(½) Cups of Flour \n" +
                 "1 Teaspoon of Baking Soda \n" +
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 "Pour batter into the prepared loaf pan.\n" +
                 "Bake in the preheated oven until the top is dark brown and a toothpick inserted into the center of the bread comes out clean, about 70 minutes. Let cool in the pan, about 30 minutes. Invert onto a wire rack and slice it into 1-inch thick slices. \n" +
                 "Put Aluminum Foil on top and let it sit to cool for at least half an hour.\n"};//Directions for Pumpkin Bread
-        Recipe p0 = new Recipe("pumpkinBread", a1,a2,0);
+        Recipe p0 = new Recipe("pumpkinBread", a1,a2,R.drawable.pumpkin_bread);
 
         String[] b1 = new String[]{"(15 ounces) caned pumpkin\n" +
                 "1 (14 ounces) caned Sweetened Condensed Milk\n" +
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 "1 (9 inches) unbaked pie crust\n"};//Ingredients for Pumpkin Pie
         String[] b2 = new String[]{"Preheat oven to 425 degrees F. Whisk pumpkin, sweetened condensed milk, eggs, spices and salt in medium bowl until smooth. Pour into crust. Bake 15 minutes.\n" +
                 "Reduce oven temperature to 350 degrees F and continue baking 35 to 40 minutes or until knife inserted 1 inch from crust comes out clean. Cool. Garnish as desired. Store leftovers covered in the refrigerator.\n"};//Directions for Pumpkin Pie
-        Recipe p1 = new Recipe("pumpkinPie", b1,b2,0);
+        Recipe p1 = new Recipe("pumpkinPie", b1,b2,R.drawable.pumpkin_pie);
 
         String[] c1 = new String[]{"(3 ounces) box lemon gelatin (I use sugar-free)\n" +
                 "1 cup hot water\n" +
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 "Chill until slightly thickened.\n" +
                 "Fold in Cool Whip and nuts.\n" +
                 "Pour into mold or bowl and refrigerate until firm.\n"};//Directions for Pumpkin Jello
-        Recipe p2 = new Recipe("pumpkinJello", c1,c2,0);
+        Recipe p2 = new Recipe("pumpkinJello", c1,c2,R.drawable.pumpkin_jello);
 
         String[] d1 = new String[]{"1 cup brewed coffee\n" +
                 "1 cup almond milk\n" +
@@ -121,7 +122,8 @@ public class MainActivity extends AppCompatActivity {
                 "Stir occasionally\n" +
                 "Serve hot or over ice\n" +
                 "Add whipped cream\n"};//Directions for Pumpkin Coffee
-        Recipe p3 = new Recipe("pumpkinCoffee", d1,d2,0);
+        Recipe p3 = new Recipe("pumpkinCoffee", d1,d2,R.drawable.pumpkin_coffee);
+        Log.d("RECIPE", p0.toString());
 
         recipies[0] = p0;
         recipies[1] = p1;
